@@ -6,8 +6,8 @@ feature 'views bookmarks' do
 
   scenario 'user views list of bookmarks' do
     visit '/bookmarks'
-    expect(page).to have_content "http://www.adobe.com"
-    expect(page).to have_content "http://www.google.com"
+    expect(page).to have_content "www.adobe.com"
+    expect(page).to have_content "www.google.com"
   end
 end
 
