@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'webrick'
 gem 'selenium-webdriver'
+gem 'pg'
 
 gem 'launchy'
 
