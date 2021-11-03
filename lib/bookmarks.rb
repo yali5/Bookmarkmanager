@@ -4,17 +4,16 @@ class Bookmarks
 
   @bookmarks = []
 
+  def self.all
+    @bookmarks
+  end
+
   conn = PG.connect( dbname: 'bookmark_manager' )
   conn.exec( "SELECT * FROM bookmarks" ) do |result|
     result.each do |row|
       puts row
-      @bookmarks << row.values_at('url')
+      @bookmarks << row['url']
     end
-  end
-
-
-  def self.all
-    @bookmarks
   end
 
 end
